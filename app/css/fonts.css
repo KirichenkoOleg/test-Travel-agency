@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'FiraSans-Regular';
+    src: url('../fonts/FiraSans-Regular/FiraSans-Regular.eot');
+    src: url('../fonts/FiraSans-Regular/FiraSans-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FiraSans-Regular/FiraSans-Regular.woff2') format('woff2'),
+         url('../fonts/FiraSans-Regular/FiraSans-Regular.woff') format('woff'),
+         url('../fonts/FiraSans-Regular/FiraSans-Regular.ttf') format('truetype'),
+         url('../fonts/FiraSans-Regular/FiraSans-Regular.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
