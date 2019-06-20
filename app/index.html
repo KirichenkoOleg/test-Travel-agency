@@ -1,125 +1,312 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>test task WA</title>
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/main.css">
-        <script src="./js/main.js"></script>
-    </head>
-    <body>
-        <header class="header position-absolute">
-            <div class="container">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>test agency-Сourage</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="header position-absolute">
+        <div class="container">
+            <div class="row">
+
+                <nav class="header__navbar navbar navbar-expand-lg ">
+                    <a class="navbar-brand" href="#">
+                        <img data-src="./img/logo.png" alt="logo image">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="header__navbar-collapse collapse navbar-collapse justify-content-end "
+                        id="navbarNavDropdown">
+
+                        <div class="header__contact-info d-none d-sm-none d-md-none d-lg-flex justify-content-end">
+                            <span class="header__adress-info d-flex align-items-center">
+                                <i class="header__icon fa fa-map-marker" aria-hidden="true"></i>
+                                г. Харьков, ул. Мироносицкая 10а
+                            </span>
+                            <span class="header__phone-info d-flex align-items-center">
+                                <i class="header__icon fa fa-phone" aria-hidden="true"></i>
+                                +38 (099) 990-81-00 (viber, telegram)
+                            </span>
+                            <a href="" class="header__social-network-link">
+                                <i class="header__icon fa fa-facebook-square" aria-hidden="true"></i>
+                            </a>
+                            <a href="" class="header__social-network-link">
+                                <i class="header__icon fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <ul class="header__custom-navbar-nav navbar-nav">
+                            <li class="header__nuv-item nav-item active">
+                                <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="header__nuv-item nav-item dropdown">
+                                <a class="header__nav-link-dropdown nav-link dropdown-toggle" href="#"
+                                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Туры</a>
+
+                                <div class="header__dropdown-menu dropdown-menu"
+                                    aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Горящие туры</a>
+                                    <a class="dropdown-item" href="#">Поиск тура</a>
+                                    <a class="dropdown-item" href="#">Туры по Украине</a>
+                                    <a class="dropdown-item" href="#">Экскурсионные туры</a>
+                                    <a class="dropdown-item" href="#">Week end туры</a>
+                                </div>
+                            </li>
+                            <li class="header__nuv-item nav-item">
+                                <a class="nav-link" href="#">Страны</a>
+                            </li>
+                            <li class="header__nuv-item nav-item dropdown">
+                                <a class="header__nav-link-dropdown nav-link dropdown-toggle" href="#"
+                                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Услуги</a>
+
+                                <div class="header__dropdown-menu dropdown-menu"
+                                    aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Авиабилеты</a>
+                                    <a class="dropdown-item" href="#">Визовая поддержка</a>
+                                    <a class="dropdown-item" href="#">Индивидуальный трансфер</a>
+                                    <a class="dropdown-item" href="#">Подарочные сертификаты</a>
+                                    <a class="dropdown-item" href="#">Бронирование отелей <br> и апартаментов</a>
+                                    <a class="dropdown-item" href="#">Как забронировать и <br> оплатить тур</a>
+                                </div>
+                            </li>
+                            <li class="header__nuv-item nav-item">
+                                <a class="nav-link" href="#">О компании</a>
+                            </li>
+                            <li class="header__nuv-item nav-item">
+                                <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="index-section-top">
+            <div class="container-fluid">
                 <div class="row">
 
-                    <nav class="header__navbar navbar navbar-expand-lg ">
-                        <a class="navbar-brand" href="#">
-                            <img src="./img/logo.png" alt="logo image">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="header__navbar-collapse collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
-
-                            <div class="header__contact-info d-none d-sm-none d-md-none d-lg-flex justify-content-end">
-                                <span class="header__adress-info d-flex align-items-center">
-                                    <i class="header__icon fa fa-map-marker" aria-hidden="true"></i>
-                                    г. Харьков, ул. Мироносицкая 10а
-                                </span>
-                                <span class="header__phone-info d-flex align-items-center">
-                                    <i class="header__icon fa fa-phone" aria-hidden="true"></i>
-                                    +38 (099) 990-81-00  (viber, telegram)
-                                </span>
-                                <a href="" class="header__social-network-link">
-                                    <i class="header__icon fa fa-facebook-square" aria-hidden="true"></i>
-                                </a>
-                                <a href="" class="header__social-network-link">
-                                    <i class="header__icon fa fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </div>
-
-                            <ul class="header__custom-navbar-nav navbar-nav">
-                                <li class="header__nuv-item nav-item active">
-                                    <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="header__nuv-item nav-item dropdown">    
-                                    <a class="header__nav-link-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">Туры</a>
-
-                                    <div class="header__dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Горящие туры</a>
-                                        <a class="dropdown-item" href="#">Поиск тура</a>
-                                        <a class="dropdown-item" href="#">Туры по Украине</a>
-                                        <a class="dropdown-item" href="#">Экскурсионные туры</a>
-                                        <a class="dropdown-item" href="#">Week end туры</a>
-                                    </div>
-                                </li>
-                                <li class="header__nuv-item nav-item">
-                                    <a class="nav-link" href="#">Страны</a>
-                                </li>
-                                <li class="header__nuv-item nav-item dropdown">    
-                                    <a class="header__nav-link-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">Услуги</a>
-
-                                    <div class="header__dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Авиабилеты</a>
-                                        <a class="dropdown-item" href="#">Визовая поддержка</a>
-                                        <a class="dropdown-item" href="#">Индивидуальный трансфер</a>
-                                        <a class="dropdown-item" href="#">Подарочные сертификаты</a>
-                                        <a class="dropdown-item" href="#">Бронирование отелей <br> и апартаментов</a>
-                                        <a class="dropdown-item" href="#">Как забронировать и <br> оплатить тур</a>
-                                    </div>
-                                </li>
-                                <li class="header__nuv-item nav-item">
-                                    <a class="nav-link" href="#">О компании</a>
-                                </li>
-                                <li class="header__nuv-item nav-item">
-                                    <a class="nav-link" href="#">Контакты</a>
-                                </li>
-                            </ul>
-
+                    <div id="carouselExampleCaptions" class="carousel slide w-100" data-ride="carousel">
+                        <div class="index-section-top__suggestions">
+                            <h3 class="index-section-top__suggestions-title">Лучшие предложения по солнечному Египту из
+                                Харькова</h3>
+                            <a href="#" class="index-section-top__suggestions-link">Получить предложения</a>
                         </div>
-                    </nav>
+                        <ol class="index-section-top__carousel-indicators carousel-indicators">
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/bg-header/banner01.png" class="d-block w-100" alt="Photo countries">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/bg-header/banner05.png" class="d-block w-100" alt="Photo countries">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/bg-header/banner03.png" class="d-block w-100" alt="Photo countries">
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-        </header>
-        <main>
-            <section class="index-section-top">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div id="carouselExampleCaptions" class="carousel slide w-100" data-ride="carousel">
-                            <div class="index-section-top__suggestions">
-                                <h3 class="index-section-top__suggestions-title">Лучшие предложения по солнечному Египту из Харькова</h3>
-                                <a href="#" class="index-section-top__suggestions-link">Получить предложения</a>
-                            </div>
-                            <ol class="index-section-top__carousel-indicators carousel-indicators">
-                                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./img/bg-header/banner01.png" class="d-block w-100" alt="Photo countries">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./img/bg-header/banner05.png" class="d-block w-100" alt="Photo countries">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./img/bg-header/banner03.png" class="d-block w-100" alt="Photo countries">
-                                </div>
-                            </div>
-                        </div>
-
+        </section>
+        <section class="offers">
+            <div class="container">
+                <div class="row">
+                    <div class="offers__button-panel d-flex col-12 col-lg-4">
+                        <span class="offers__hot-tour active">Горящие туры</span>
+                        <span class="offers__popular-tour">Популярные туры</span>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+                    <div class="offers__slick-carousel regular slider">
+                        <div class="offers__tour-cards-item">
+                            <img data-src="./img/Offers-block/item-img_1.png" alt="photo tour place">
+
+                            <div class="offers__tour-card-thumbnail">
+                                <h3 class="offers__cards-caption">8 марта в Cyrene Sharm hotel</h3>
+                                <span class="offers__tour-cards-date w-100 text-left">(12.03.2018 — 19.03.2018)</span>
+                                <p class="offers__tour-cards-about">Перелёт, питание по системе all inclusive, трансфер
+                                </p>
+                                <p class="offers__tour-cards-price">1 259 грн
+                                    <sup> /за 1 человека</sup>
+                                </p>
+                                <a href="#" class="offers__tour-cards-link-next"></a>
+                            </div>
+                        </div>
+                        <div class="offers__tour-cards-item">
+                            <img data-src="./img/Offers-block/item-img_2.png" alt="photo tour place">
+
+                            <div class="offers__tour-card-thumbnail">
+                                <h3 class="offers__cards-caption">8 марта в Cyrene Sharm hotel</h3>
+                                <span class="offers__tour-cards-date w-100 text-left">(12.03.2018 — 19.03.2018)</span>
+                                <p class="offers__tour-cards-about">Перелёт, питание по системе all inclusive, трансфер
+                                </p>
+                                <p class="offers__tour-cards-price">2 259 грн
+                                    <sup> /за 1 человека</sup>
+                                </p>
+                                <a href="#" class="offers__tour-cards-link-next"></a>
+                            </div>
+                        </div>
+                        <div class="offers__tour-cards-item">
+                            <img data-src="./img/Offers-block/item-img_1.png" alt="photo tour place">
+
+                            <div class="offers__tour-card-thumbnail">
+                                <h3 class="offers__cards-caption">8 марта в Cyrene Sharm hotel</h3>
+                                <span class="offers__tour-cards-date w-100 text-left">(12.03.2018 — 19.03.2018)</span>
+                                <p class="offers__tour-cards-about">Перелёт, питание по системе all inclusive, трансфер
+                                </p>
+                                <p class="offers__tour-cards-price">3 259 грн
+                                    <sup> /за 1 человека</sup>
+                                </p>
+                                <a href="#" class="offers__tour-cards-link-next"></a>
+                            </div>
+                        </div>
+                        <div class="offers__tour-cards-item">
+                            <img data-src="./img/Offers-block/item-img_2.png" alt="photo tour place">
+
+                            <div class="offers__tour-card-thumbnail">
+                                <h3 class="offers__cards-caption">8 марта в Cyrene Sharm hotel</h3>
+                                <span class="offers__tour-cards-date w-100 text-left">(12.03.2018 — 19.03.2018)</span>
+                                <p class="offers__tour-cards-about">Перелёт, питание по системе all inclusive, трансфер
+                                </p>
+                                <p class="offers__tour-cards-price">4 259 грн
+                                    <sup> /за 1 человека</sup>
+                                </p>
+                                <a href="#" class="offers__tour-cards-link-next"></a>
+                            </div>
+                        </div>
+                        <div class="offers__tour-cards-item">
+                            <img data-src="./img/Offers-block/item-img_1.png" alt="photo tour place">
+
+                            <div class="offers__tour-card-thumbnail">
+                                <h3 class="offers__cards-caption">8 марта в Cyrene Sharm hotel</h3>
+                                <span class="offers__tour-cards-date w-100 text-left">(12.03.2018 — 19.03.2018)</span>
+                                <p class="offers__tour-cards-about">Перелёт, питание по системе all inclusive, трансфер
+                                </p>
+                                <p class="offers__tour-cards-price">5 259 грн
+                                    <sup> /за 1 человека</sup>
+                                </p>
+                                <a href="#" class="offers__tour-cards-link-next"></a>
+                            </div>
+                        </div>
+                        <div class="offers__tour-cards-item">
+                            <img data-src="./img/Offers-block/item-img_2.png" alt="photo tour place">
+
+                            <div class="offers__tour-card-thumbnail">
+                                <h3 class="offers__cards-caption">8 марта в Cyrene Sharm hotel</h3>
+                                <span class="offers__tour-cards-date w-100 text-left">(12.03.2018 — 19.03.2018)</span>
+                                <p class="offers__tour-cards-about">Перелёт, питание по системе all inclusive, трансфер
+                                </p>
+                                <p class="offers__tour-cards-price">6 259 грн
+                                    <sup> /за 1 человека</sup>
+                                </p>
+                                <a href="#" class="offers__tour-cards-link-next"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h3 class="advantages__section-title text-uppercase">Наши преимущества</h3>
+                    </div>
+                    <div class="advantages__scroll-block col-12 d-flex p-0">
+                        <div class="col-12 col-lg-5">
+                            <img src="./img/Advantages/advan-item_1.png" alt="photo">
+                        </div>
+                        <div class="advantages__info-block col-12 col-lg-7">
+
+                            <!-- <scrollbar id="my-scrollbar">
+                                <div class="scroll-content">
+                                    <p class="advantages__info">Очень долго подбирали разные варианты для того, чтобы
+                                        отпраздновать свой юбилейный День рождения в путешествии и не могли
+                                        определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
+                                        пожелания, предложила отдых в Турции, отель
+                                        Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+                                        предложенный вариант!!!! Отдых получился отличный!
+                                        Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
+                                        номер с видом на море. 
+                                    </p>
+                                    <p class="advantages__info">Очень долго подбирали разные варианты для того, чтобы
+                                        отпраздновать свой юбилейный День рождения в путешествии и не могли
+                                        определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
+                                        пожелания, предложила отдых в Турции, отель
+                                        Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+                                        предложенный вариант!!!! Отдых получился отличный!
+                                        Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
+                                        номер с видом на море. 
+                                    </p>
+                                </div>
+                                <div class="scrollbar-track scrollbar-track-x">
+                                    <div class="scrollbar-thumb scrollbar-thumb-x"></div>
+                                </div>
+                                <div class="scrollbar-track scrollbar-track-y">
+                                    <div class="scrollbar-thumb scrollbar-thumb-y"></div>
+                                </div>
+                            </scrollbar> -->
+
+                            <p class="advantages__info">1_Очень долго подбирали разные варианты для того, чтобы
+                                отпраздновать свой юбилейный День рождения в путешествии и не могли
+                                определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
+                                пожелания, предложила отдых в Турции, отель
+                                Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+                                предложенный вариант!!!! Отдых получился отличный!
+                                Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
+                                номер с видом на море. </p>
+                            <p class="advantages__info">2_ Очень долго подбирали разные варианты для того, чтобы
+                                отпраздновать свой юбилейный День рождения в путешествии и не могли
+                                определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
+                                пожелания, предложила отдых в Турции, отель
+                                Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+                                предложенный вариант!!!! Отдых получился отличный!
+                                Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
+                                номер с видом на море. </p>
+                                <p class="advantages__info">3_ Очень долго подбирали разные варианты для того, чтобы
+                                    отпраздновать свой юбилейный День рождения в путешествии и не могли
+                                    определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
+                                    пожелания, предложила отдых в Турции, отель
+                                    Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+                                    предложенный вариант!!!! Отдых получился отличный!
+                                    Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
+                                    номер с видом на море. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script><!-- в файле присутствует код плагинов которым нужны DOM елементы -->
+</body>
+
 </html>

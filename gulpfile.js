@@ -9,13 +9,23 @@ const shell = require('gulp-shell'); //очередность запуска
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload; //перезегрузка сервера
 const runSequence = require('run-sequence'); //запускает задачи по очереди
-
+const sourcemaps = require ('gulp-sourcemaps'); //позволяет дебажить минифицированный код в браузере, при работе сервера
 
 const path = {
 	src: {
 		html: 'app/index.html',
-		styles: 'app/css/main.css',
-		js: 'app/js/script.js',
+		styles: [
+			'app/css/slick.css',
+			'app/css/slick-theme.css',
+			'app/css/jquery.mCustomScrollbar.css',
+			'app/css/main.css'
+		],
+		js: [
+			'app/js/lazyloadxt.min.js',
+			'app/js/slick.min.js',
+			'app/js/jquery.mCustomScrollbar.concat.min.js',
+			'app/js/script.js'
+		],
 		fonts: 'app/fonts/**/*',
 		image: 'app/img/**/*'
 	},
@@ -30,18 +40,20 @@ const path = {
 
 
 
-gulp.task('js', function() { //  произвольное название задачи
-	return gulp.src(path.src.js)//  записан путь который хранится в переменной path
-		.pipe(uglify())//  минификация файлов/ -вызов переменной uglify, и в тоже время функции
-		.pipe(concat('main.js'))//  склеивание файлов /в скобках concat указываем как бужет называться файл на выходе
-		.pipe(gulp.dest(path.build.js))//  указываем адрес к переменной 'path'(build: {js: [ ...])} куда мы хотим положить наш файл
-		.pipe(reload({stream:true})); //  отслеживание файлов, reload({stream:true}) дает возможность при перезагрузке браузера оставить страницу на том же месте при вертикальном скролле
+gulp.task('js', function() {
+	return gulp.src(path.src.js)
+		// .pipe(uglify())
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest(path.build.js))
+		.pipe(reload({stream:true}));
 });
 
 gulp.task('css', function() {
 	return gulp.src(path.src.styles)
+		.pipe(sourcemaps.init())// активация sourcemaps
 		.pipe(minifyCss())
 		.pipe(concat('main.css'))
+		.pipe(sourcemaps.write())// активация sourcemaps
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream:true}));
 });

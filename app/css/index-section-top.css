@@ -23,10 +23,11 @@
 	padding-top: 65px;
 	padding-left: 390px;
 	height: 225px;
-	width: 68%;
+	/* width: 68%; */
 	width: 1350px;
 	left: 0;
 	bottom: 180px;
+	bottom: 25%;
 	background-color: rgba(0, 51, 153, .5);
 	z-index: 1;
 }

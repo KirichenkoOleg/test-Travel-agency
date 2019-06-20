@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+/* -------------------------------------------------------------- Specisication */
 
 .header {
     top: 0;
@@ -85,8 +89,10 @@
 .header__dropdown-menu {
     background-color: rgba(51, 153, 204, .8);
     left: -20px;
-    padding: 20px 0;
+    top: 105%;
+    padding: 20px 0 15px;
     border-radius: 0;
+    border: none;
 }
 .header__dropdown-menu a {
     font-size: 14px;

@@ -1,0 +1,182 @@
+.offers {
+	padding: 75px 0;
+}
+
+.offers__button-panel {
+	justify-content: space-between;
+	margin-bottom: 70px;
+}
+
+.offers__button-panel span {
+	color: #000000;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+.offers__button-panel span.active {
+	color: #ffcc33;
+}
+
+/*-------------------------------------------------------- slider Slick */
+.slider {
+	width: 100%;
+}
+
+.slider .slick-list {
+	margin: 0 70px; /* 105px по макету минус 35px - margin у слайдов по бокам */
+	/* border: 1px solid red;1 */
+	/* background-color: grey;1 */
+}
+
+/*---------------------------------------------------- slider arrows */
+.slick-arrow {
+	height: 100%;
+	transition-duration: .2s;
+}
+.slick-arrow::before {
+	display: none;
+}
+
+.slick-prev {
+	left: 65px;
+	z-index: 2;
+}
+.slick-next {
+	right: 65px;
+	z-index: 2;
+}
+
+.slick-arrow.slick-disabled {
+	opacity: .5;
+}
+
+.slick-arrow:hover {
+	border-radius: 10px;
+	background-color: #f8f7f7;
+	height: 40px;
+}
+.slick-arrow:active {
+	box-shadow: none;
+}
+
+.slick-arrow > i {
+	font-size: 20px;
+	color: #000000;
+}
+
+/* -------------------------------------------------------------------- slides */
+.slick-slide {
+	margin: 0 35px;
+	transition: all ease-in-out .3s;
+	opacity: .2;
+}
+
+.slick-active {
+	/* слайды которые показываються в области видимости */
+	opacity: 1;
+}
+/* .slick-current {
+	opacity: 1;
+} */
+
+/*--------------------------------------------------------------- items in slide */
+.offers__tour-cards-item {
+	display: flex !important;/* что бы перебить стили скрипта */
+	flex-direction: row;
+	padding: 15px;
+	background-color: #f8f7f7;
+	border-radius: 5px;
+}
+
+.offers__tour-cards-item img {
+	width: 187px;
+	height: 175px;
+	margin-right: 25px;
+}
+
+.offers__tour-card-thumbnail {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 10px;
+	line-height: 1;
+	position: relative;
+}
+
+.offers__cards-caption {
+	font-size: 17px;
+	color: #000000;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.offers__tour-cards-date {
+	font-size: 14px;
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.offers__tour-cards-date::after {
+	content: "";
+	display: block;
+	height: 2px;
+	width: 100%;
+	border-bottom: 1px solid #eae9e9;
+	position: absolute;
+	bottom: -10px;
+}
+
+.offers__tour-cards-about {
+	font-size: 14px;
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 25px;
+}
+
+.offers__tour-cards-price {
+	font-size: 20px;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.offers__tour-cards-price sup {
+	font-size: 55%;
+	font-size: 11px;
+	color: #898989;
+	top: -1.2em;
+}
+
+.offers__tour-cards-link-next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 35px;
+	width: 35px;
+	border-radius: 20px;
+	background-color: #fbd341;
+	transition-duration: .2s;
+}
+
+.offers__tour-cards-link-next:hover {
+	box-shadow: 0px 0px 3px 0px #003399;
+}
+
+.offers__tour-cards-link-next::after {
+	display: inline-block;
+	content: "";
+	margin-left: .255em;
+	vertical-align: .15em;
+	height: 10px;
+	width: 10px;
+	border: none;
+	border-bottom: .1em solid #111;
+	border-left: .1em solid #111;
+	transform: rotate(-135deg) translate(15%, -15%);
+}
+/*----------------------------- items in slide */
