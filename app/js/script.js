@@ -27,17 +27,23 @@ $(function () {
 		slidesToScroll: 1,
 		edgeFriction: 0.1, //Сопротивление при попытки прокрутить карусель, когда дальше нет слайдов и она не зацилена
 		responsive: [{
-				breakpoint: 1200,
+				breakpoint: 1199,
 				settings: {
 					slidesToShow: 2,
 				}
 			},
 			{
-				breakpoint: 992,
+				breakpoint: 991,
 				settings: {
 					slidesToShow: 1,
 				}
-			}
+			},
+			// {
+			// 	breakpoint: 575,
+			// 	settings: {
+			// 		centerPadding: '20px'
+			// 	}
+			// }
 		],
 		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',

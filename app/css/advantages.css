@@ -9,6 +9,10 @@
     background-color: #f8f7f7;
 }
 
+.advantages__scroll-block {
+    padding: 0;
+}
+
 .advantages__section-title {
     text-align: left;
     color: #000000;
@@ -19,7 +23,7 @@
 }
 
 .advantages__info-block {
-    padding: 0 0px 0 70px;
+    padding: 0 0 0 70px;
     margin: 65px 0;
     height: 185px;
 }
@@ -43,3 +47,61 @@
     background-color: #fbd341 !important;/* что бы перебить классы плагина */
 }
 /*------------------------------------------------------------ scroll */
+
+/*---------------------------------------------- media queries */
+@media screen and (max-width: 1199px) {
+    .advantages__section-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .advantages__scroll-block img {
+        width: 100%;
+    }
+    .advantages__info-block {
+        margin: 35px 0;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .advantages__info-block {
+        margin-bottom: 0;
+        padding: 0 30px;
+    }
+    
+    .advantages__info-block p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .advantages {
+        padding: 40px 0;
+    }
+
+    .advantages__section-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .advantages__info-block {
+        height: auto;
+    }
+    .advantages__info-block p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .advantages__scroll-block {
+        padding: 0 15px;
+    }
+
+    .advantages__info-block {
+        padding: 0 15px;
+    }
+    .advantages__info-block p {
+        font-size: 15px;
+    }
+
+}

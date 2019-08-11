@@ -19,12 +19,10 @@
                     <a class="navbar-brand" href="#">
                         <img data-src="./img/logo.png" alt="logo image">
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler header__navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="header__navbar-collapse collapse navbar-collapse justify-content-end "
-                        id="navbarNavDropdown">
+                    <div class="header__navbar-collapse collapse navbar-collapse " id="navbarNavDropdown">
 
                         <div class="header__contact-info d-none d-sm-none d-md-none d-lg-flex justify-content-end">
                             <span class="header__adress-info d-flex align-items-center">
@@ -48,12 +46,9 @@
                                 <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="header__nuv-item nav-item dropdown">
-                                <a class="header__nav-link-dropdown nav-link dropdown-toggle" href="#"
-                                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">Туры</a>
+                                <a class="header__nav-link-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Туры</a>
 
-                                <div class="header__dropdown-menu dropdown-menu"
-                                    aria-labelledby="navbarDropdownMenuLink">
+                                <div class="header__dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="#">Горящие туры</a>
                                     <a class="dropdown-item" href="#">Поиск тура</a>
                                     <a class="dropdown-item" href="#">Туры по Украине</a>
@@ -99,12 +94,7 @@
                 <div class="row">
 
                     <div id="carouselExampleCaptions" class="carousel slide w-100" data-ride="carousel">
-                        <div class="index-section-top__suggestions">
-                            <h3 class="index-section-top__suggestions-title">Лучшие предложения по солнечному Египту из
-                                Харькова</h3>
-                            <a href="#" class="index-section-top__suggestions-link">Получить предложения</a>
-                        </div>
-                        <ol class="index-section-top__carousel-indicators carousel-indicators">
+                        <ol class="index-section-top__carousel-indicators carousel-indicators d-none d-sm-flex">
                             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
@@ -120,6 +110,18 @@
                                 <img src="./img/bg-header/banner03.png" class="d-block w-100" alt="Photo countries">
                             </div>
                         </div>
+                        <div class="index-section-top__suggestions">
+                            <h3 class="index-section-top__suggestions-title">Лучшие предложения по солнечному Египту из Харькова</h3>
+                            <a href="#" class="index-section-top__suggestions-link">Получить предложения</a>
+                        </div>
+                        <a class="carousel-control-prev d-md-none" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next d-md-none" href="#carouselExampleCaptions" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
 
                 </div>
@@ -128,7 +130,7 @@
         <section class="offers">
             <div class="container">
                 <div class="row">
-                    <div class="offers__button-panel d-flex col-12 col-lg-4">
+                    <div class="col-12 col-lg-5 col-xl-4 offers__button-panel d-flex">
                         <span class="offers__hot-tour active">Горящие туры</span>
                         <span class="offers__popular-tour">Популярные туры</span>
                     </div>
@@ -235,29 +237,33 @@
                     <div class="col-12">
                         <h3 class="advantages__section-title text-uppercase">Наши преимущества</h3>
                     </div>
-                    <div class="advantages__scroll-block col-12 d-flex p-0">
-                        <div class="col-12 col-lg-5">
-                            <img src="./img/Advantages/advan-item_1.png" alt="photo">
-                        </div>
-                        <div class="advantages__info-block col-12 col-lg-7">
+                    <div class="col-12 advantages__scroll-block d-flex ">
 
-                            <p class="advantages__info">1_Очень долго подбирали разные варианты для того, чтобы
-                                отпраздновать свой юбилейный День рождения в путешествии и не могли
-                                определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
-                                пожелания, предложила отдых в Турции, отель
-                                Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
-                                предложенный вариант!!!! Отдых получился отличный!
-                                Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
-                                номер с видом на море. </p>
-                            <p class="advantages__info">2_ Очень долго подбирали разные варианты для того, чтобы
-                                отпраздновать свой юбилейный День рождения в путешествии и не могли
-                                определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
-                                пожелания, предложила отдых в Турции, отель
-                                Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
-                                предложенный вариант!!!! Отдых получился отличный!
-                                Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
-                                номер с видом на море. </p>
+                        <div class="row ">
+                            <div class="col-12 col-lg-5">
+                                <img data-src="./img/Advantages/advan-item_1.png" alt="photo">
+                            </div>
+                            <div class="col-12 col-lg-7 advantages__info-block">
+    
+                                <p class="advantages__info">1_Очень долго подбирали разные варианты для того, чтобы
+                                    отпраздновать свой юбилейный День рождения в путешествии и не могли
+                                    определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
+                                    пожелания, предложила отдых в Турции, отель
+                                    Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+                                    предложенный вариант!!!! Отдых получился отличный!
+                                    Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
+                                    номер с видом на море. </p>
+                                <p class="advantages__info">2_ Очень долго подбирали разные варианты для того, чтобы
+                                    отпраздновать свой юбилейный День рождения в путешествии и не могли
+                                    определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все
+                                    пожелания, предложила отдых в Турции, отель
+                                    Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+                                    предложенный вариант!!!! Отдых получился отличный!
+                                    Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный
+                                    номер с видом на море. </p>
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -265,7 +271,7 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container-fluid footer__form-bg p-0">
+        <div class="container-fluid footer__form-bg ">
             <div class="container footer__form-callback">
                 
                 <div class="row">
@@ -285,7 +291,7 @@
                         </div>
     
                         <div class="col-12 col-lg-2">
-                            <input type="tel" class="form-control" id="inputAddress" placeholder="Телефон">
+                            <input type="tel" class="form-control" id="inputPhone" placeholder="Телефон">
                         </div>
     
                         <div class="footer__form-select col-12 col-lg-2">
@@ -296,7 +302,6 @@
                                 <option value="3">Шри-Ланка</option>
                                 <option value="4">Доминикана</option>
                             </select>
-                            <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
                         </div>
     
                         <button type="submit" class="col-12 col-lg-3 btn btn-primary">Получить предложение</button>
@@ -310,16 +315,16 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-4 footer__description-item">
-                        <img src="./img/footer-logo.png" class="footer__logo" alt="footer logo image">
+                    <div class="col-12 col-lg-4 footer__description-item">
 
+                        <img data-src="./img/footer-logo.png" class="footer__logo" alt="footer logo image">
                         <hr>
                         <p class="footer__agency-description">Кураж тур агенство,которое предоставляет услуги по поиску, оформлению и подбору туров для вас и ваших родных.</p>
                         <hr>
+                        <p class="footer__site-creation">Создание сайта &#8212; <img data-src="./img/create-logo.png" alt=""></p>
 
-                        <p class="footer__site-creation">Создание сайта &#8212; <img src="./img/create-logo.png" alt=""></p>
                     </div>
-                    <div class="col-lg-2 offset-lg-1">
+                    <div class="col-12 col-lg-2 offset-lg-1">
                         <h3 class="footer__block-title">Навигация</h3>
                         <ul class="footer__block-list">
                             <li>
@@ -339,7 +344,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-12 col-lg-2">
                         <h3 class="footer__block-title">Поддержка</h3>
                         <ul class="footer__block-list">
                             <li>
@@ -353,7 +358,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 footer__contact-data">
+                    <div class="col-12 col-lg-3 footer__contact-data">
                         <h3 class="footer__block-title">Контакты</h3>
 
                         <p class="footer__contact-address">
@@ -382,8 +387,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script><!-- в файле присутствует код плагинов которым нужны DOM елементы -->
 </body>
 
