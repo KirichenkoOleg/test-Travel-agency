@@ -2,7 +2,7 @@
 
 ## Clone the project:
 
-git clone https://github.com/KirichenkoOleg/test-WA.git
+git clone https://github.com/KirichenkoOleg/test-Travel-agency.git
 
 ## Upload npm packages:
 
