@@ -1,18 +1,16 @@
-//require - это команда для подключения
-const gulp = require('gulp'); //загружаем, подключаем gulp
+
+const { src, dest, series, parallel, watch } = require('gulp'); //загружаем, подключаем gulp
 const uglify = require('gulp-uglify'); //подкл. пакет минифицирования .js файлов
 const concat = require('gulp-concat'); //склеивает файлы, в один
-const minifyCss = require('gulp-minify-css'); //сжимает css файлы
+const cleanCSS = require('gulp-clean-css'); //сжимает css файлы
+const del = require('del'); //удаление папки перед сборкой
 const imagemin = require('gulp-imagemin'); //оптимизация изображений
-const clean = require('gulp-clean'); //удаляет файл или папку
-const shell = require('gulp-shell'); //очередность запуска
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload; //перезегрузка сервера
-const runSequence = require('run-sequence'); //запускает задачи по очереди
-const sourcemaps = require ('gulp-sourcemaps'); //позволяет дебажить минифицированный код в браузере, при работе сервера
+const sourcemaps = require ('gulp-sourcemaps'); //позволяет дебажить минифицированный код в браузере
 
 const path = {
-	src: {
+	source: {
 		html: 'app/index.html',
 		styles: [
 			'app/css/slick.css',
@@ -39,84 +37,83 @@ const path = {
 };
 
 
-
-gulp.task('js', function() {
-	return gulp.src(path.src.js)
-		// .pipe(uglify())
-		.pipe(concat('main.js'))
-		.pipe(gulp.dest(path.build.js))
+function html() {
+	return src(path.source.html)
+		.pipe(dest(path.build.html))
 		.pipe(reload({stream:true}));
-});
+}
 
-gulp.task('css', function() {
-	return gulp.src(path.src.styles)
+function js() {
+	return src(path.source.js)
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(concat('main.js'))
+		.pipe(sourcemaps.write())
+		.pipe(dest(path.build.js))
+		.pipe(reload({stream:true}));
+}
+
+function css() {
+	return src(path.source.styles)
 		.pipe(sourcemaps.init())// активация sourcemaps
-		.pipe(minifyCss())
+		.pipe(cleanCSS())
 		.pipe(concat('main.css'))
 		.pipe(sourcemaps.write())// активация sourcemaps
-		.pipe(gulp.dest(path.build.css))
+		.pipe(dest(path.build.css))
 		.pipe(reload({stream:true}));
-});
+}
 
-gulp.task('html', function() {
-	return gulp.src(path.src.html)
-		.pipe(gulp.dest(path.build.html))
-		.pipe(reload({stream:true}));
-});
+function fonts() {
+	return src(path.source.fonts)
+		.pipe(dest(path.build.fonts));
+}
 
-gulp.task('fonts', function() {
-	return gulp.src(path.src.fonts)
-		.pipe(gulp.dest(path.build.fonts));
-});
-
-gulp.task('images', function() {
-	return gulp.src(path.src.image)
+function images() {
+	return src(path.source.image)
 		.pipe(imagemin([
-		    imagemin.gifsicle({interlaced: true}),
-		    imagemin.jpegtran({progressive: true}),
-		    imagemin.optipng({optimizationLevel: 5}),
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.mozjpeg({quality: 75, progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
 		    imagemin.svgo({
-		        plugins: [
-		            {removeViewBox: true},
-		            {cleanupIDs: false}
-		        ]
-		    })
+				plugins: [
+					{removeViewBox: true},
+					{cleanupIDs: false}
+				]
+			})
 		], {
 		    verbose: true
 		}))
-		.pipe(gulp.dest(path.build.image));
-});
+		.pipe(dest(path.build.image));
+};
 
-gulp.task('clean', function() {
-	return gulp.src('build')
-		.pipe(clean());
-});//задача удаления файла или папки
+function cleanFolder() {
+	return del(['build']);
+};//задача удаления файла или папки
 
-gulp.task('build', shell.task([
-	'gulp clean',
-	'gulp html',
-	'gulp css',
-	'gulp js',
-	'gulp images',
-	'gulp fonts'
-	]));
+function browser_Sync() {
+	browserSync.init({
+		server: {
+			baseDir: "./build"
+		}
+	});
+};
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./build" //прописываем адрес откуда открыть
-        }
-    });
-});
+function watcher() {
+	watch('app/index.html', html);
+	watch('app/css/*.css', css);
+	watch('app/js/*.js', js);
+};
 
-gulp.task('watch', function() {
-	gulp.watch('app/index.html', ['html']);
-	gulp.watch('app/css/*.css', ['css']);
-	gulp.watch('app/js/*.js', ['js']);
-});// Ctrl+C для остановки задачи
+const build = series(cleanFolder, parallel(html, css, js, images, fonts));
+const server = series(build, parallel(watcher, browser_Sync));
 
-gulp.task('server', function() {
-	runSequence('build', 'browser-sync', 'watch');
-}); // Ctrl+C для остановки задачи
-
-gulp.task('default', ['server']); //программа по умолчанию
+exports.html = html;
+exports.css = css;
+exports.js = js;
+exports.fonts = fonts;
+exports.images = images;
+exports.clean = cleanFolder;
+exports.watcher = watcher;
+exports.build  = build;
+exports.server  = server;
+exports.default  = server;
